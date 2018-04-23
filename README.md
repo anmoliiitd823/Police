@@ -1,25 +1,13 @@
-# README
+# Criminal Records
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Features:-
 
-Things you may want to cover:
+* Police Authentication
 
-* Ruby version
+* Criminal Saved with its location
 
-* System dependencies
+* Location of criminal saved in words by police officer and converted in latitude and longitude using Google API at the backend.
 
-* Configuration
+* Database supporting all the CRUD operations
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Police
+* The record of any criminal can be updated
