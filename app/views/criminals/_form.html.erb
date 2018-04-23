@@ -1,0 +1,84 @@
+<div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box" style="margin-top: -120px;">
+                            <%= form_with(model: criminal, local: true) do |form| %>
+                              <% if criminal.errors.any? %>
+                                <div id="error_explanation">
+                                  <h2><%= pluralize(criminal.errors.count, "error") %> prohibited this criminal from being saved:</h2>
+
+                                  <ul>
+                                  <% criminal.errors.full_messages.each do |message| %>
+                                    <li><%= message %></li>
+                                  <% end %>
+                                  </ul>
+                                </div>
+                              <% end %>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                        <div class="form-group">
+                                          <%= form.label :first_name , class: 'col-md-2 control-label'%>
+                                            <%= form.text_field :first_name, id: :criminal_first_name , class: 'form-control' %>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <%= form.label :second_name , class: 'col-md-2 control-label'%>
+                                            <%= form.text_field :second_name, id: :criminal_second_name , class: 'form-control' %>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <%= form.label :identification_mark , class: 'col-md-2 control-label'%>
+                                            <%= form.text_field :identification_mark, id: :criminal_identification_mark , class: 'form-control' %>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <%= form.label :location_of_crime , class: 'col-md-2 control-label'%>
+                                            <%= form.text_area :location_of_crime, id: :criminal_location_of_crime , class: 'form-control' %>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <%= form.label :address , class: 'col-md-2 control-label'%>
+                                            <%= form.text_area :address, id: :criminal_address , class: 'form-control' %>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                          <%= form.label :height , class: 'col-md-2 control-label'%>
+                                            <%= form.number_field :height, id: :criminal_height , class: 'form-control'%>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <%= form.label :weight , class: 'col-md-2 control-label'%>
+                                            <%= form.number_field :weight, id: :criminal_weight , class: 'form-control' %>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <%= form.label :description , class: 'col-md-2 control-label'%>
+                                            <%= form.text_area :description, id: :criminal_description , class: 'form-control'%>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <%= form.label :gender , class: 'col-md-2 control-label'%>
+                                            <%= form.text_field :gender, id: :criminal_gender , class: 'form-control' %>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <%= form.label :age , class: 'col-md-2 control-label'%>
+                                            <%= form.number_field :age, id: :criminal_age, class: 'form-control' %>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <%= form.file_field :avatar %>
+                                        </div>  
+
+                                        <div class="form-group">
+                                        <%= form.submit %>
+                                      </div>
+                                    <% end %>
+                                </div><!-- end col -->
+
+                            </div><!-- end row -->
+                        </div>
+                    </div><!-- end col -->
+                </div>
+                <!-- end row -->

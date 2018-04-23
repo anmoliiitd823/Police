@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @criminal.first_name %>
+</p>
+
+<p>
+  <strong>Second name:</strong>
+  <%= @criminal.second_name %>
+</p>
+
+<p>
+  <strong>Identification mark:</strong>
+  <%= @criminal.identification_mark %>
+</p>
+
+<p>
+  <strong>Location of crime:</strong>
+  <%= @criminal.location_of_crime %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @criminal.address %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @criminal.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @criminal.weight %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @criminal.description %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @criminal.gender %>
+</p>
+<p>
+  <%= image_tag @criminal.avatar.url(:medium) %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @criminal.age %>
+</p>
+
+<%= link_to 'Edit', edit_criminal_path(@criminal) %> |
+<%= link_to 'Back', criminals_path %>
